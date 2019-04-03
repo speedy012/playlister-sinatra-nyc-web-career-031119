@@ -1,0 +1,4 @@
+<% Artist.all.each do |artist| %>
+  <a href="http://127.0.0.1:9393/artists/<%=artist.slug%>"> <%=artist.name%></a>
+  <br>
+  <%end%>

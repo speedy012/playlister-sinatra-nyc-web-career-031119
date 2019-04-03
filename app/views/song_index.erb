@@ -1,0 +1,5 @@
+<% Song.all.each do |song| %>
+
+  <a href="http://127.0.0.1:9393/songs/<%=song.slug%>"> <%=song.name%></a>
+  <br>
+  <%end%>

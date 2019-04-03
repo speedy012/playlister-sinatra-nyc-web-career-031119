@@ -1,0 +1,4 @@
+<% Genre.all.each do |genre| %>
+  <a href="http://127.0.0.1:9393/genres/<%=genre.slug%>"> <%=genre.name%></a>
+  <br>
+  <%end%>

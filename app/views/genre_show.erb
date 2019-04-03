@@ -1,0 +1,7 @@
+<% genre = Genre.find_by_slug(params[:slug]) %>
+
+<h1><%=genre.name.capitalize%> <br></h1>
+<h4> Page with Genre Artists</h4>
+<% genre.artists.uniq.each do |artist| %>
+<a href="http://127.0.0.1:9393/artists/<%=artist.slug%>"> <%=artist.name%><br></a>
+<% end %>

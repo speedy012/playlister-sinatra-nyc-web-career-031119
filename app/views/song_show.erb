@@ -1,0 +1,9 @@
+
+<% song = Song.find_by_slug(params[:slug]) %>
+
+<h1><%=song.name%> <br></h1>
+<%=song.artist.name%> <br>
+<% song.genres.uniq.each do |genre| %>
+<h3>Genre</h3><a href="http://127.0.0.1:9393/genres/<%=genre.slug%>"> <%=genre.name%></a>
+<h4>Artist</h4><a href="http://127.0.0.1:9393/artists/<%=song.artist.slug%>"> <%=song.artist.name%><br></a>
+<% end %>
